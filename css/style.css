@@ -29,6 +29,8 @@ h6 {
 }
 html,
 body {
+  position: relative;
+  overflow: hidden;
   height: 100%;
   line-height: 1;
 }
@@ -71,7 +73,7 @@ button {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 4000px;
+  width: 1920px;
   height: 4px;
 }
 .dino__img {
@@ -82,34 +84,187 @@ button {
 .dino__jump {
   animation: dinoAnimation 1.1s infinite linear;
 }
-.dino__cactus {
+
+.dino__cactus--img1 {
   position: absolute;
-  top: 10px;
-  left: 600px;
-  animation: cactusAnimetion 1.1s infinite linear;
+  top: 6px;
+  left: 2000px;
+  animation: cactusAnimetion1 6.1s infinite ease-out;
+}
+.dino__cactus--img2 {
+  position: absolute;
+  top: 6px;
+  left: 2500px;
+}
+.cactus {
+  animation: cactusAnimetion1 6.1s infinite ease-out;
+}
+.dino__cactus--img3 {
+  position: absolute;
+  top: 6px;
+  left: 3100px;
+}
+.dino__cactus--img4 {
+  position: absolute;
+  top: 6px;
+  left: 3200px;
+}
+.dino__count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.score--text {
+  font-size: 30px;
+}
+.score {
+  font-size: 30px;
+  padding-left: 10px;
+  padding-top: 2px;
 }
 
-@keyframes cactusAnimetion {
+/*--------------------------------------------------------*/
+@keyframes cactusAnimetion1 {
   0% {
-    left: 500px;
+    left: 2000px;
   }
-  25% {
-    left: 400px;
+  2% {
+    left: 1950px;
+  }
+  4% {
+    left: 1900px;
+  }
+  6% {
+    left: 1850px;
+  }
+  8% {
+    left: 1800px;
+  }
+  10% {
+    left: 1750px;
+  }
+  12% {
+    left: 1700px;
+  }
+  14% {
+    left: 1650px;
+  }
+  16% {
+    left: 1600px;
+  }
+  18% {
+    left: 1550px;
+  }
+  20% {
+    left: 1500px;
+  }
+  22% {
+    left: 1450px;
+  }
+  24% {
+    left: 1400px;
+  }
+  26% {
+    left: 1350px;
+  }
+  28% {
+    left: 1300px;
+  }
+  30% {
+    left: 1250px;
+  }
+  32% {
+    left: 1200px;
+  }
+  34% {
+    left: 1150px;
+  }
+  36% {
+    left: 1100px;
+  }
+  38% {
+    left: 1050px;
+  }
+  40% {
+    left: 1000px;
+  }
+  42% {
+    left: 950px;
+  }
+  44% {
+    left: 900px;
+  }
+  46% {
+    left: 850px;
+  }
+  48% {
+    left: 800px;
   }
   50% {
-    left: 200px;
+    left: 750px;
+  }
+  52% {
+    left: 700px;
+  }
+  54% {
+    left: 650px;
+  }
+  56% {
+    left: 600px;
+  }
+  58% {
+    left: 550px;
+  }
+  60% {
+    left: 500px;
+  }
+  62% {
+    left: 450px;
+  }
+  64% {
+    left: 400px;
+  }
+  66% {
+    left: 350px;
+  }
+  68% {
+    left: 300px;
   }
   70% {
+    left: 250px;
+  }
+  72% {
+    left: 200px;
+  }
+  74% {
+    left: 150px;
+  }
+  76% {
     left: 100px;
   }
-  80% {
+  77% {
     left: 50px;
   }
-  100% {
+  77.5% {
+    left: 20px;
+  }
+  78% {
+    left: 10px;
+  }
+  79% {
     left: 0px;
+  }
+  80% {
+    left: -50px;
+  }
+  100% {
+    left: -80px;
   }
 }
 
+/*--------------------------------------------------------*/
 @keyframes dinoAnimation {
   0% {
     top: 0px;
