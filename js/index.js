@@ -4,6 +4,9 @@ let cactus2 = document.querySelector(".dino__cactus--img2");
 let cactus3 = document.querySelector(".dino__cactus--img3");
 let cactus4 = document.querySelector(".dino__cactus--img4");
 let scoreElement = document.querySelector(".score");
+let cloud2 = document.querySelector(".cloud__dino2");
+let cloud3 = document.querySelector(".cloud__dino3");
+let cloud4 = document.querySelector(".cloud__dino4");
 
 let score = 0;
 // Оновлюємо рахунок кожну секунду
@@ -11,6 +14,17 @@ let checkscore = setInterval(() => {
   score += 1; // Збільшуємо рахунок на 1
   scoreElement.innerHTML = score; // Оновлюємо текст у HTML елементі
 }, 1000);
+
+setInterval(() => {
+  cloud2.classList.add("cloud__animation");
+}, 7000);
+
+setInterval(() => {
+  cloud3.classList.add("cloud__animation");
+}, 15000);
+setInterval(() => {
+  cloud4.classList.add("cloud__animation");
+}, 20000);
 
 setTimeout(() => {
   cactus2.classList.add("cactus");

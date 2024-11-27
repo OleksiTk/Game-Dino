@@ -29,6 +29,8 @@ h6 {
 }
 html,
 body {
+  font-family: "Press Start 2P";
+
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -58,8 +60,8 @@ button {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 100px;
-  height: 50px;
+  width: 120px;
+  height: 60px;
   border: 1px solid black;
   border-radius: 20px;
 }
