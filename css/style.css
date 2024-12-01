@@ -109,7 +109,7 @@ button {
 
 .dino__img {
   position: relative;
-  top: 5px;
+  top: -1px;
   left: 40px;
 }
 .dino__jump {
@@ -118,13 +118,13 @@ button {
 
 .dino__cactus--img1 {
   position: absolute;
-  top: 18px;
+  top: 30px;
   left: 2000px;
   animation: cactusAnimetion1 6.1s infinite ease-out;
 }
 .dino__cactus--img2 {
   position: absolute;
-  top: 18px;
+  top: 30px;
   left: 2500px;
 }
 .cactus {
@@ -132,12 +132,12 @@ button {
 }
 .dino__cactus--img3 {
   position: absolute;
-  top: 18px;
+  top: 30px;
   left: 3100px;
 }
 .dino__cactus--img4 {
   position: absolute;
-  top: 18px;
+  top: 30px;
   left: 3200px;
 }
 .dino__count {

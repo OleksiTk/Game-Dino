@@ -49,6 +49,18 @@ button {
   background-color: inherit;
 }
 /*--------------------------------------------------------*/
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*="__container"] {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
 .play__button {
   padding-top: 400px;
   display: flex;
@@ -64,4 +76,110 @@ button {
   height: 60px;
   border: 1px solid black;
   border-radius: 20px;
+}
+
+.page__play--skin--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: 2px black solid;
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+.page__container {
+  width: 710px;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.page__logo {
+  padding-top: 20px;
+  margin: 0 auto;
+  font-size: 10px;
+}
+.page__play--guest {
+  padding-top: 100px;
+  padding-left: 20px;
+}
+.page__play--guest--body {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.page__registretion {
+  display: flex;
+  position: relative;
+}
+.page__registretion::after {
+  rotate: 90deg;
+  position: absolute;
+  content: "";
+  background-color: black;
+  top: 150px;
+  left: 80px;
+  width: 290px;
+  height: 2px;
+}
+.page__sidebar {
+  padding-left: 100px;
+}
+.page__play--guest--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: 2px black solid;
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+.page__login {
+}
+.login--page__body {
+  padding: 40px 30px;
+  border: 2px black solid;
+  display: grid;
+  gap: 20px;
+}
+.login--page__username {
+  border: 2px black solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+.login--page__password {
+  border: 2px black solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+.login--page__email {
+  border: 2px black solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+.login--page__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login--page__buttons--body {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.login--page__button--login {
+  width: 170px;
+  padding: 20px;
+  border: 2px black solid;
+}
+.login--page__button--register {
+  width: 170px;
+  padding: 20px;
+  border: 2px black solid;
+}
+.login--page__button--forgot {
+  font-size: 10px;
+  padding-top: 20px;
 }
