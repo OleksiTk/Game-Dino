@@ -26,24 +26,50 @@
             </div>
           </div>
           <div class="page__sidebar">
+            <a href="" class="page__back-butoon"><-</a>
             <div class="page__login">
               <form class="login--page__body">
                 <input
                   type="Username"
                   placeholder="Username"
                   class="login--page__username"
+                  id="nameREG"
                 />
                 <input
                   type="password"
                   placeholder="Password"
                   class="login--page__password"
+                  id="passwordREG"
                 />
                 <input
                   type="email"
                   placeholder="Email"
                   class="login--page__email"
+                  id="emailREG"
                 />
               </form>
+              <form class="login--page__body--for--login">
+                <input
+                  type="Username"
+                  placeholder="Username"
+                  class="login--page__username"
+                  id="nameLOG"
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="login--page__password"
+                  id="passwordLOG"
+                />
+                <a href="" class="login--page__button--forgot"
+                  >Forgot a password?</a
+                >
+              </form>
+              <div class="login--page__sumbitbuttons">
+                <button type="submit" class="login--page__sumbitbutton">
+                  Sumbit
+                </button>
+              </div>
               <div class="login--page__buttons">
                 <div class="login--page__buttons--body">
                   <button class="login--page__button--login">Login</button>
@@ -51,14 +77,12 @@
                     Register
                   </button>
                 </div>
-                <a href="" class="login--page__button--forgot"
-                  >Forgot a password?</a
-                >
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="js/page.js"></script>
   </body>
 </html>
