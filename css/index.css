@@ -94,9 +94,18 @@ button {
   flex-direction: column;
 }
 .page__logo {
-  padding-top: 20px;
+  position: relative;
+  padding-top: 0px;
   margin: 0 auto;
-  font-size: 10px;
+}
+.page__logo__text {
+  position: absolute;
+  z-index: 2;
+  top: 55%;
+  left: 75%;
+  font-size: 20px;
+  white-space: nowrap;
+  rotate: 30deg;
 }
 .page__play--guest {
   padding-top: 50px;
