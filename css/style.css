@@ -98,7 +98,7 @@ button {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 1920px;
+  width: 2920px;
   height: 4px;
 }
 .dino__earth {
@@ -119,7 +119,7 @@ button {
 .dino__cactus--img1 {
   position: absolute;
   top: 30px;
-  left: 2000px;
+  left: 2300px;
   animation: cactusAnimetion1 6.1s infinite ease-out;
 }
 .dino__cactus--img2 {
@@ -159,7 +159,7 @@ button {
 /*--------------------------------------------------------*/
 @keyframes cactusAnimetion1 {
   0% {
-    left: 2000px;
+    left: 3000px;
   }
   2% {
     left: 1950px;
@@ -326,7 +326,7 @@ button {
 /*--------------------------------------------------------*/
 @keyframes clodAnimation1 {
   0% {
-    left: 2000px;
+    left: 2500px;
   }
   2% {
     left: 1950px;

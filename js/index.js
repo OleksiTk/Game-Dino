@@ -83,3 +83,20 @@ let alive = setInterval(() => {
     window.location.href = "index.html"; // Вказуєте шлях до сторінки
   }
 }, 100);
+
+//Skins
+let skinsSwitch = document.querySelector(".dino--img--skins");
+let takesSkins = localStorage.getItem("userSkins");
+if (takesSkins == "OG1") {
+  skinsSwitch.src = "skins/original dino/Dino Animation.gif";
+} else if (takesSkins == "CD2") {
+  skinsSwitch.src = "skins/cool dino/Dino_cool.gif";
+} else if (takesSkins == "FD3") {
+  skinsSwitch.src = "skins/flower dino/Dino_flower.gif";
+} else if (takesSkins == "PD4") {
+  skinsSwitch.src = "skins/piviozavr dino/Dino_pivozavr.gif";
+} else if (takesSkins == "RD5") {
+  skinsSwitch.src = "skins/robocop dino/Dino_robocop.gif";
+} else if (takesSkins == "SD6") {
+  skinsSwitch.src = "skins/snow dino/Dino_snow.gif";
+}
