@@ -4,13 +4,34 @@ let buttons = document.querySelectorAll(".skins__take--button");
 // Додати обробник подій для кожної кнопки
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
+    updateButtonState(button);
+    resetOtherButtons(button);
     event.stopPropagation(); // Запобігаємо поширенню події (не запускається перевертання картки)
-    console.log("Ви натиснули на кнопку");
   });
 });
+window.addEventListener("load", () => {
+  let selectedSkin = localStorage.getItem("userSkins");
+  if (selectedSkin) {
+    buttons.forEach((button) => {
+      if (button.id === selectedSkin) {
+        updateButtonState(button);
+      } else {
+        button.innerHTML = "GET";
+      }
+    });
+  }
+});
+function updateButtonState(button) {
+  button.innerHTML = "OWN";
+}
 
-// Функція для перевертання картки
-// Переконайтеся, що функція експортується
+function resetOtherButtons(clickedButton) {
+  buttons.forEach((button) => {
+    if (button !== clickedButton) {
+      button.innerHTML = "GET";
+    }
+  });
+}
 
 let cards = document.querySelectorAll(".card");
 cards.forEach((card) => {
@@ -45,6 +66,7 @@ originalDino.addEventListener("click", () => {
 coolDino.addEventListener("click", () => {
   takeSkins = "CD2";
   localStorage.setItem("userSkins", takeSkins);
+
   console.log(takeSkins);
 });
 
