@@ -82,10 +82,10 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  border: 2px black solid;
+  width: 270px;
+  padding: 30px;
   border-radius: 20px;
-  padding: 20px 30px;
+  border: 2px black solid;
 }
 .page__container {
   width: 710px;
@@ -126,28 +126,31 @@ button {
   content: "";
   background-color: black;
   top: 150px;
-  left: 80px;
+  left: 195px;
   width: 290px;
   height: 2px;
 }
 .page__sidebar {
+  display: block;
   padding-left: 100px;
 }
 .page__back-butoon {
+  cursor: pointer;
   display: none;
   position: absolute;
   top: 20px;
-  left: 240px;
+  left: 350px;
   z-index: 2;
 }
 .page__play--guest--button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  border: 2px black solid;
+  white-space: nowrap;
+  width: 270px;
+  padding: 30px;
   border-radius: 20px;
-  padding: 20px 30px;
+  border: 2px black solid;
 }
 .page__login {
 }
@@ -188,11 +191,13 @@ button {
 .login--page__button--login {
   width: 270px;
   padding: 30px;
+  border-radius: 20px;
   border: 2px black solid;
 }
 .login--page__button--register {
   width: 270px;
   padding: 30px;
+  border-radius: 20px;
   border: 2px black solid;
 }
 .login--page__button--forgot {
@@ -201,6 +206,7 @@ button {
   padding-left: 100px;
 }
 .login--page__sumbitbuttons {
+  cursor: pointer;
   display: none;
   padding-left: 130px;
   padding-top: 20px;
@@ -219,4 +225,31 @@ button {
   border: 2px black solid;
   display: none;
   gap: 20px;
+}
+.page__account {
+  display: none;
+  padding-left: 100px;
+  padding-top: 50px;
+}
+.page__buttons--account {
+  display: grid;
+  gap: 20px;
+}
+.button--play__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px black solid;
+}
+.button--account-go__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px black solid;
 }

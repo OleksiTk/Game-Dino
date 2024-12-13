@@ -12,7 +12,7 @@ let logins = document.querySelector(".login--page__body--for--login");
 buttonLogin.addEventListener("click", showLog);
 buttonRegister.addEventListener("click", showReg);
 buttonBack.addEventListener("click", goBackPage);
-buttonRegSumbit.addEventListener("click", regSumbit);
+// buttonRegSumbit.addEventListener("click", regSumbit);
 
 //Function
 
@@ -31,19 +31,47 @@ function goBackPage() {
   buttonBack.style.display = "none";
 }
 
-function regSumbit() {
-  window.location.reload();
-}
+// function regSumbit() {
+//   window.location.reload();
+// }
 
 //Login
 function showLog() {
   logins.style.display = "grid";
   buttonRegSumbit.style.display = "flex";
   buttonsAccount.style.display = "none";
-
   buttonBack.style.display = "block";
 }
 ////////////////////////////////////////////////////////////
+//Reistration
+let pageSideBar = document.querySelector(".page__sidebar");
+let accountPage = document.querySelector(".page__account");
+
+let storedAccount = JSON.parse(localStorage.getItem("Account"));
+
+// Якщо об'єкта в localStorage немає, створюємо новий об'єкт і зберігаємо його
+if (!storedAccount) {
+  let checkAccountReg = {
+    name: ".",
+    password: ".",
+    email: ".",
+    validate: 0, // або будь-яке значення за замовчуванням
+  };
+
+  // Перетворюємо об'єкт в рядок перед збереженням в localStorage
+  localStorage.setItem("Account", JSON.stringify(checkAccountReg));
+  storedAccount = checkAccountReg; // Присвоюємо новий об'єкт
+}
+
+// Тепер перевіряємо значення "validate"
+if (storedAccount.validate === 3) {
+  console.log("Пісюн"); // Це для тесту
+  pageSideBar.style.display = "none"; // Сховуємо бокову панель
+  accountPage.style.display = "block"; // Показуємо сторінку акаунта
+} else {
+  console.log("Account validate не дорівнює 3");
+}
+//
 let fullName = document.querySelector("#nameREG");
 let yourEmail = document.querySelector("#emailREG");
 let yourPassword = document.querySelector("#passwordREG");
@@ -52,6 +80,7 @@ fullName.addEventListener("input", checkErorName);
 yourPassword.addEventListener("input", checkErrorPassword);
 yourEmail.addEventListener("input", checkErrorEmail);
 
+//Inputs
 function checkErorName() {
   let checkName = /^[A-Za-z]+ [A-Za-z]+$/;
 
@@ -94,12 +123,14 @@ function checkErrorEmail() {
     }
   }
 }
+///
 
 let errorText = document.createElement("div");
-submitValidation.addEventListener("click", () => {
+
+submitValidation.addEventListener("click", (event) => {
+  event.preventDefault(); // Зупиняє стандартну поведінку кнопки (перезавантаження сторінки)
   checkValidet();
 });
-
 function checkValidet() {
   let count = 0;
   let checkName = /^[A-Za-z]+ [A-Za-z]+$/;
@@ -111,6 +142,8 @@ function checkValidet() {
   if (checkName.test(fullName.value)) {
     console.log("correct");
     count++;
+    storedAccount.name = fullName.value;
+    localStorage.setItem("Account", JSON.stringify(storedAccount));
   } else {
     count--;
     validateInputs.appendChild(errorText);
@@ -122,6 +155,8 @@ function checkValidet() {
   if (checkPassword.test(yourPassword.value)) {
     count++;
     console.log("correct");
+    storedAccount.password = yourPassword.value;
+    localStorage.setItem("Account", JSON.stringify(storedAccount));
   } else {
     count--;
     validateInputs.appendChild(errorText);
@@ -133,14 +168,25 @@ function checkValidet() {
   if (checkEmail.test(yourEmail.value)) {
     console.log("correct");
     count++;
+    storedAccount.email = yourEmail.value;
+    localStorage.setItem("Account", JSON.stringify(storedAccount));
   } else {
     count--;
     validateInputs.appendChild(errorText);
     errorText.classList.add("validation__error");
     errorText.innerHTML = "Dont correct";
   }
+  console.log("Count: " + count);
+  if (count == 3) {
+    storedAccount.validate = 3;
+    localStorage.setItem("Account", JSON.stringify(storedAccount));
+    console.log("Correct");
+    pageSideBar.style.display = "none";
+    accountPage.style.display = "block";
+  }
 }
 ////////////////////////////////////////////////////////////
+//login
 let LOGName = document.querySelector("#nameLOG");
 let LOGPassword = document.querySelector("#passwordLOG");
 
