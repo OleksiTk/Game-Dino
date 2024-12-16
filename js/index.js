@@ -51,7 +51,7 @@ function jump() {
 	}
 	setTimeout(() => {
 		dino.classList.remove('dino__jump')
-	}, 700)
+	}, 600)
 }
 
 let alive = setInterval(() => {
