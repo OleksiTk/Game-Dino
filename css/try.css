@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  font-family: "Press Start 2P";
+  height: 100%;
+  line-height: 1;
+}
+textarea,
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+/*--------------------------------------------------------*/
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  margin: 0 auto;
+}
+.skins__backbutton {
+  font-size: 30px;
+  position: absolute;
+  z-index: 2;
+  top: 2%;
+  left: 1%;
+}
+.skins__container {
+  padding-top: 80px;
+}
+.skins__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.skins__header--account {
+  font-size: 40px;
+}
+.skins__header--account--money {
+  padding-top: 30px;
+}
+.skins__body {
+  padding-top: 20px;
+}
+
+.skins__gridline {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 50px;
+}
+
+.skins__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 20px;
+  perspective: 1000px; /* додаємо ефект 3D */
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.card.flipped {
+  transform: rotateY(180deg); /* Перевертає картку */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* ховає зворотний бік картки */
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.skins__name--dino {
+  padding-bottom: 30px;
+  font-size: 15px;
+}
+
+.skins__img {
+  width: 60px;
+  height: 60px;
+}
+
+.card-back {
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  transform: rotateY(180deg); /* Зворотний бік картки */
+}
+.skins__info {
+  font-size: 15px;
+}
+.skins__take {
+  padding-top: 20px;
+}
+.skins__take--button {
+  padding-top: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
